@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${title}"></title>
+</head>
+
+<body>
+	<h1 th:text="${title}"></h1>
+
+	<form th:action="@{/usuario/form}" th:object="${usuario}" method="post">
+
+		<table>
+			<tr>
+				<td> Apellidos</td>
+				<td>
+					<input type="text" th:field="*{apellidos}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('apellidos')}"><small th:errors="*{apellidos}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+			<tr>
+				<td> Nombre</td>
+				<td>
+					<input type="text" th:field="*{nombre}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('nombre')}"><small th:errors="*{nombre}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+			<tr>
+				<td> Dirección</td>
+				<td>
+					<input type="text" th:field="*{direccion}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('direccion')}"><small th:errors="*{direccion}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+			<tr>
+				<td> Población</td>
+				<td>
+					<input type="text" th:field="*{poblacion}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('poblacion')}"><small th:errors="*{poblacion}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+			<tr>
+				<td> Código</td>
+				<td>
+					<input type="text" th:field="*{codigo}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('codigo')}"><small th:errors="*{codigo}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+
+
+
+
+
+
+
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Guardar" />
+				</td>
+
+
+			</tr>
+
+
+		</table>
+
+		<input type="hidden" th:field="*{id}" />
+
+
+
+
+
+
+
+
+	</form>
+
+
+</body>
+
+</html>

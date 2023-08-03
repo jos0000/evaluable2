@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${title}"></title>
+</head>
+
+<body>
+	<h1 th:text="${title}"></h1>
+
+	<form th:action="@{/libro/form}" th:object="${libro}" method="post">
+
+		<table>
+			<tr>
+				<td> Titulo</td>
+				<td>
+					<input type="text" th:field="*{titulo}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('titulo')}"><small th:errors="*{titulo}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+			<tr>
+				<td> Autor</td>
+				<td>
+					<input type="text" th:field="*{autor}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('autor')}"><small th:errors="*{autor}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+			<tr>
+				<td> Tipo</td>
+				<td>
+					<input type="text" th:field="*{tipo}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('tipo')}"><small th:errors="*{tipo}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+			<tr>
+				<td> Editorial</td>
+				<td>
+					<input type="text" th:field="*{editorial}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('editorial')}"><small th:errors="*{editorial}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+			<tr>
+				<td> Ejemplares</td>
+				<td>
+					<input type="text" th:field="*{ejemplares}">
+
+				</td>
+				<td th:if="${#fields.hasErrors('ejemplares')}"><small th:errors="*{ejemplares}"
+						class="form-text text-danger"></small></td>
+
+			</tr>
+
+
+
+
+
+
+
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Guardar" />
+				</td>
+
+
+			</tr>
+
+
+		</table>
+
+		<input type="hidden" th:field="*{id}" />
+
+
+
+
+
+
+
+
+	</form>
+
+
+</body>
+
+</html>
