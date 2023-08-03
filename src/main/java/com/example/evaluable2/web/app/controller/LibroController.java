@@ -39,7 +39,7 @@ public class LibroController {
 
 	@GetMapping("/form")
 	public String crear(Map<String, Object> model) {
-		model.put("titulo", "Formulario de clientes");
+		model.put("title", "Formulario de libros");
 		model.put("libro", new Libro());
 
 		return "libro/form";

@@ -38,7 +38,7 @@ public class UsuarioController {
 
 	@GetMapping("/form")
 	public String crear(Map<String, Object> model) {
-		model.put("titulo", "Formulario de usuario");
+		model.put("title", "Formulario de usuarios");
 		model.put("usuario", new Usuario());
 
 		return "usuario/form";
