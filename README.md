@@ -2,7 +2,7 @@
 
 Proyecto de clase.
 Objetivo:
-Se realizará una gestión de biblioteca en la que se manejarán como entidades principales:/n
+Se realizará una gestión de biblioteca en la que se manejarán como entidades principales:\n
 Libro: incluyendo la cantidad de ejemplares del libro.
 Usuario: podrá llevarse en préstamos los libros.
 Deberán implementarse los siguientes conceptos:
