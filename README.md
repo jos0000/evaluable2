@@ -1,6 +1,6 @@
 # evaluable2
 
-Proyecto de clase
+Proyecto de clase.
 Objetivo:
 Se realizará una gestión de biblioteca en la que se manejarán como entidades principales:
 Libro: incluyendo la cantidad de ejemplares del libro.
