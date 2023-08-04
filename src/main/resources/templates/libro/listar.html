@@ -24,9 +24,8 @@
 							th:href="@{/libro/listar}">Listar</a></li>
 					<li class="nav-item"><a class="nav-link active" aria-current="page"
 							th:href="@{/libro/form}">Libro+</a></li>
-					<li class="nav-item"><a class="nav-link active" aria-current="page"
-							th:href="@{/home}">Home</a></li>
-							
+					<li class="nav-item"><a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a></li>
+
 
 				</ul>
 			</div>
@@ -57,8 +56,8 @@
 					<td th:text="${libro.tipo}"></td>
 					<td th:text="${libro.editorial}"></td>
 					<td th:text="${libro.ejemplares}"></td>
-				
-					
+
+
 					<td>
 						<a class="btn btn-primary btn-xs" th:href="@{/libro/form/} + ${libro.id}">
 							Editar
@@ -73,12 +72,15 @@
 				</tr>
 			</tbody>
 		</table>
+		<nav th:replace="paginator-nav :: paginator"></nav>
 	</div>
 
 	<!-- Script de bootstrap enlazado vía CDN-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
-</body>
 
+	
+</body>
+<footer th:replace="~{layout/layout :: footer}"></footer>
 </html>

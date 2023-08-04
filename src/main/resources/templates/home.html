@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html xmlns:th="https:www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Biblioteca</title>
-    <style>
-        body {
-            background-image: url('images/vinci.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: rgb(0, 0, 0);
-            font-family: Arial, sans-serif;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi Biblioteca</title>
+	<style>
+		body {
+			background-image: url('images/vinci.png');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 100vh;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: rgb(0, 0, 0);
+			font-family: Arial, sans-serif;
+		}
 
-        h1 {
-            font-size: 75px;
-            text-align: center;
-            margin-bottom: 150px;
-        }
+		h1 {
+			font-size: 75px;
+			text-align: center;
+			margin-bottom: 150px;
+		}
 
-        a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-size: 40px;
-            margin: 10px;
-            padding: 10px 20px;
-            border: 2px solid rgb(0, 0, 0);
-            border-radius: 5px;
-        }
+		a {
+			color: rgb(0, 0, 0);
+			text-decoration: none;
+			font-size: 40px;
+			margin: 10px;
+			padding: 10px 20px;
+			border: 2px solid rgb(0, 0, 0);
+			border-radius: 5px;
+		}
 
-        a:hover {
-            background-color: rgb(192, 191, 188);
-        }
-    </style>
+		a:hover {
+			background-color: rgb(192, 191, 188);
+		}
+
+		
+	</style>
 </head>
+
 <body>
-    <h1>Mi Biblioteca</h1>
-    <a th:href="@{/libro/listar}">Libros</a>
-    <a th:href="@{/usuario/listar}">Usuarios</a>
+	<h1>Mi Biblioteca</h1>
+	<a th:href="@{/libro/listar}">Libros</a>
+	<a th:href="@{/usuario/listar}">Usuarios</a>
+
+	
 </body>
+<footer th:replace="~{layout/layout :: footer}"></footer>
 </html>
